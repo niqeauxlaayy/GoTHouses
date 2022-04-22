@@ -22,6 +22,11 @@
 		52EE5C22281320400019A5A0 /* NetworkLayer+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C21281320400019A5A0 /* NetworkLayer+Injection.swift */; };
 		52EE5C24281320880019A5A0 /* Clients+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C23281320880019A5A0 /* Clients+Injection.swift */; };
 		52EE5C262813214D0019A5A0 /* Services+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C252813214D0019A5A0 /* Services+Injection.swift */; };
+		52EE5C28281323880019A5A0 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C27281323880019A5A0 /* Manager.swift */; };
+		52EE5C2A281324210019A5A0 /* HouseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C29281324210019A5A0 /* HouseModel.swift */; };
+		52EE5C2C2813248A0019A5A0 /* HouseModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C2B2813248A0019A5A0 /* HouseModelMapper.swift */; };
+		52EE5C2E281325470019A5A0 /* Managers+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C2D281325470019A5A0 /* Managers+Injection.swift */; };
+		52EE5C302813258E0019A5A0 /* Mappers+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C2F2813258E0019A5A0 /* Mappers+Injection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,11 @@
 		52EE5C21281320400019A5A0 /* NetworkLayer+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkLayer+Injection.swift"; sourceTree = "<group>"; };
 		52EE5C23281320880019A5A0 /* Clients+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Clients+Injection.swift"; sourceTree = "<group>"; };
 		52EE5C252813214D0019A5A0 /* Services+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services+Injection.swift"; sourceTree = "<group>"; };
+		52EE5C27281323880019A5A0 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		52EE5C29281324210019A5A0 /* HouseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseModel.swift; sourceTree = "<group>"; };
+		52EE5C2B2813248A0019A5A0 /* HouseModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseModelMapper.swift; sourceTree = "<group>"; };
+		52EE5C2D281325470019A5A0 /* Managers+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Managers+Injection.swift"; sourceTree = "<group>"; };
+		52EE5C2F2813258E0019A5A0 /* Mappers+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mappers+Injection.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +152,7 @@
 			children = (
 				52EE5C1C28131D9D0019A5A0 /* Character */,
 				52EE5C1728131C1B0019A5A0 /* House */,
+				52EE5C2F2813258E0019A5A0 /* Mappers+Injection.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -149,6 +160,8 @@
 		52EE5C05281310BF0019A5A0 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				52EE5C27281323880019A5A0 /* Manager.swift */,
+				52EE5C2D281325470019A5A0 /* Managers+Injection.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -191,6 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				52EE5C1828131C2B0019A5A0 /* APIHouseModel.swift */,
+				52EE5C29281324210019A5A0 /* HouseModel.swift */,
+				52EE5C2B2813248A0019A5A0 /* HouseModelMapper.swift */,
 			);
 			path = House;
 			sourceTree = "<group>";
@@ -285,12 +300,17 @@
 				52EE5C2028131E620019A5A0 /* App+Injection.swift in Sources */,
 				52EE5C1B28131CEC0019A5A0 /* APIService.swift in Sources */,
 				52EE5C1E28131DAE0019A5A0 /* APICharacterModel.swift in Sources */,
+				52EE5C2C2813248A0019A5A0 /* HouseModelMapper.swift in Sources */,
 				52EE5C1928131C2B0019A5A0 /* APIHouseModel.swift in Sources */,
+				52EE5C28281323880019A5A0 /* Manager.swift in Sources */,
 				52EE5BF428130F730019A5A0 /* ContentView.swift in Sources */,
+				52EE5C302813258E0019A5A0 /* Mappers+Injection.swift in Sources */,
 				52EE5BF228130F730019A5A0 /* GoTHousesApp.swift in Sources */,
 				52EE5C10281314460019A5A0 /* Constants.swift in Sources */,
 				52EE5C22281320400019A5A0 /* NetworkLayer+Injection.swift in Sources */,
+				52EE5C2A281324210019A5A0 /* HouseModel.swift in Sources */,
 				52EE5C142813175B0019A5A0 /* APIClient.swift in Sources */,
+				52EE5C2E281325470019A5A0 /* Managers+Injection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,6 +16,8 @@ extension Resolver: ResolverRegistering {
         
         self.registerClients()
         self.registerNetworkLayer()
+        self.registerManagers()
+        self.registerMappers()
         self.registerServices()
     }
 }
