@@ -10,6 +10,9 @@ import Resolver
 extension Resolver {
     
     static func registerMappers() {
+        
+        self.register { CharacterModelMapper() }.implements(CharacterModelMapperRepresentable.self)
+        self.register { HouseDetailsModelMapper() }.implements(HouseDetailsModelMapperRepresentable.self)
         self.register { HouseModelMapper() }.implements(HouseModelMapperRepresentable.self)
     }
 }

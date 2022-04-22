@@ -27,6 +27,13 @@
 		52EE5C2C2813248A0019A5A0 /* HouseModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C2B2813248A0019A5A0 /* HouseModelMapper.swift */; };
 		52EE5C2E281325470019A5A0 /* Managers+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C2D281325470019A5A0 /* Managers+Injection.swift */; };
 		52EE5C302813258E0019A5A0 /* Mappers+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C2F2813258E0019A5A0 /* Mappers+Injection.swift */; };
+		52EE5C322813276D0019A5A0 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C312813276D0019A5A0 /* CharacterModel.swift */; };
+		52EE5C34281328B40019A5A0 /* Optional+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C33281328B40019A5A0 /* Optional+Extensions.swift */; };
+		52EE5C3628132E3C0019A5A0 /* CharacterModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C3528132E3C0019A5A0 /* CharacterModelMapper.swift */; };
+		52EE5C3828132FD60019A5A0 /* MapperHelperConformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C3728132FD60019A5A0 /* MapperHelperConformable.swift */; };
+		52EE5C3B281334430019A5A0 /* HouseDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C3A281334430019A5A0 /* HouseDetailsModel.swift */; };
+		52EE5C3D281334BE0019A5A0 /* HouseDetailsModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C3C281334BE0019A5A0 /* HouseDetailsModelMapper.swift */; };
+		52EE5C4028134F790019A5A0 /* CharacterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C3F28134F790019A5A0 /* CharacterType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +57,13 @@
 		52EE5C2B2813248A0019A5A0 /* HouseModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseModelMapper.swift; sourceTree = "<group>"; };
 		52EE5C2D281325470019A5A0 /* Managers+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Managers+Injection.swift"; sourceTree = "<group>"; };
 		52EE5C2F2813258E0019A5A0 /* Mappers+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mappers+Injection.swift"; sourceTree = "<group>"; };
+		52EE5C312813276D0019A5A0 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		52EE5C33281328B40019A5A0 /* Optional+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extensions.swift"; sourceTree = "<group>"; };
+		52EE5C3528132E3C0019A5A0 /* CharacterModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModelMapper.swift; sourceTree = "<group>"; };
+		52EE5C3728132FD60019A5A0 /* MapperHelperConformable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperHelperConformable.swift; sourceTree = "<group>"; };
+		52EE5C3A281334430019A5A0 /* HouseDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailsModel.swift; sourceTree = "<group>"; };
+		52EE5C3C281334BE0019A5A0 /* HouseDetailsModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailsModelMapper.swift; sourceTree = "<group>"; };
+		52EE5C3F28134F790019A5A0 /* CharacterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +102,7 @@
 				52EE5C06281310C50019A5A0 /* Helper */,
 				52EE5C05281310BF0019A5A0 /* Manager */,
 				52EE5C04281310B70019A5A0 /* Models */,
+				52EE5C3E281347050019A5A0 /* Protocols */,
 				52EE5C03281310B00019A5A0 /* Resources */,
 				52EE5C02281310A70019A5A0 /* Services */,
 				52EE5C012813109E0019A5A0 /* Types */,
@@ -124,6 +139,7 @@
 		52EE5C012813109E0019A5A0 /* Types */ = {
 			isa = PBXGroup;
 			children = (
+				52EE5C3F28134F790019A5A0 /* CharacterType.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -152,6 +168,7 @@
 			children = (
 				52EE5C1C28131D9D0019A5A0 /* Character */,
 				52EE5C1728131C1B0019A5A0 /* House */,
+				52EE5C392813342F0019A5A0 /* HouseDetails */,
 				52EE5C2F2813258E0019A5A0 /* Mappers+Injection.swift */,
 			);
 			path = Models;
@@ -176,6 +193,7 @@
 		52EE5C07281310CC0019A5A0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				52EE5C33281328B40019A5A0 /* Optional+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -214,8 +232,27 @@
 			isa = PBXGroup;
 			children = (
 				52EE5C1D28131DAE0019A5A0 /* APICharacterModel.swift */,
+				52EE5C312813276D0019A5A0 /* CharacterModel.swift */,
+				52EE5C3528132E3C0019A5A0 /* CharacterModelMapper.swift */,
 			);
 			path = Character;
+			sourceTree = "<group>";
+		};
+		52EE5C392813342F0019A5A0 /* HouseDetails */ = {
+			isa = PBXGroup;
+			children = (
+				52EE5C3A281334430019A5A0 /* HouseDetailsModel.swift */,
+				52EE5C3C281334BE0019A5A0 /* HouseDetailsModelMapper.swift */,
+			);
+			path = HouseDetails;
+			sourceTree = "<group>";
+		};
+		52EE5C3E281347050019A5A0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				52EE5C3728132FD60019A5A0 /* MapperHelperConformable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,11 +334,17 @@
 				52EE5C0E281313510019A5A0 /* NetworkLayer.swift in Sources */,
 				52EE5C262813214D0019A5A0 /* Services+Injection.swift in Sources */,
 				52EE5C24281320880019A5A0 /* Clients+Injection.swift in Sources */,
+				52EE5C3B281334430019A5A0 /* HouseDetailsModel.swift in Sources */,
+				52EE5C34281328B40019A5A0 /* Optional+Extensions.swift in Sources */,
+				52EE5C4028134F790019A5A0 /* CharacterType.swift in Sources */,
+				52EE5C3628132E3C0019A5A0 /* CharacterModelMapper.swift in Sources */,
 				52EE5C2028131E620019A5A0 /* App+Injection.swift in Sources */,
 				52EE5C1B28131CEC0019A5A0 /* APIService.swift in Sources */,
 				52EE5C1E28131DAE0019A5A0 /* APICharacterModel.swift in Sources */,
 				52EE5C2C2813248A0019A5A0 /* HouseModelMapper.swift in Sources */,
 				52EE5C1928131C2B0019A5A0 /* APIHouseModel.swift in Sources */,
+				52EE5C3D281334BE0019A5A0 /* HouseDetailsModelMapper.swift in Sources */,
+				52EE5C3828132FD60019A5A0 /* MapperHelperConformable.swift in Sources */,
 				52EE5C28281323880019A5A0 /* Manager.swift in Sources */,
 				52EE5BF428130F730019A5A0 /* ContentView.swift in Sources */,
 				52EE5C302813258E0019A5A0 /* Mappers+Injection.swift in Sources */,
@@ -309,6 +352,7 @@
 				52EE5C10281314460019A5A0 /* Constants.swift in Sources */,
 				52EE5C22281320400019A5A0 /* NetworkLayer+Injection.swift in Sources */,
 				52EE5C2A281324210019A5A0 /* HouseModel.swift in Sources */,
+				52EE5C322813276D0019A5A0 /* CharacterModel.swift in Sources */,
 				52EE5C142813175B0019A5A0 /* APIClient.swift in Sources */,
 				52EE5C2E281325470019A5A0 /* Managers+Injection.swift in Sources */,
 			);
