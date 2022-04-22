@@ -15,6 +15,12 @@
 		52EE5C0E281313510019A5A0 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C0D281313510019A5A0 /* NetworkLayer.swift */; };
 		52EE5C10281314460019A5A0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C0F281314460019A5A0 /* Constants.swift */; };
 		52EE5C142813175B0019A5A0 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C132813175B0019A5A0 /* APIClient.swift */; };
+		52EE5C1928131C2B0019A5A0 /* APIHouseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C1828131C2B0019A5A0 /* APIHouseModel.swift */; };
+		52EE5C1B28131CEC0019A5A0 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C1A28131CEC0019A5A0 /* APIService.swift */; };
+		52EE5C1E28131DAE0019A5A0 /* APICharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C1D28131DAE0019A5A0 /* APICharacterModel.swift */; };
+		52EE5C2028131E620019A5A0 /* App+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C1F28131E620019A5A0 /* App+Injection.swift */; };
+		52EE5C22281320400019A5A0 /* NetworkLayer+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C21281320400019A5A0 /* NetworkLayer+Injection.swift */; };
+		52EE5C24281320880019A5A0 /* Clients+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C23281320880019A5A0 /* Clients+Injection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		52EE5C0D281313510019A5A0 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		52EE5C0F281314460019A5A0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		52EE5C132813175B0019A5A0 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		52EE5C1828131C2B0019A5A0 /* APIHouseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHouseModel.swift; sourceTree = "<group>"; };
+		52EE5C1A28131CEC0019A5A0 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		52EE5C1D28131DAE0019A5A0 /* APICharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICharacterModel.swift; sourceTree = "<group>"; };
+		52EE5C1F28131E620019A5A0 /* App+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+Injection.swift"; sourceTree = "<group>"; };
+		52EE5C21281320400019A5A0 /* NetworkLayer+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkLayer+Injection.swift"; sourceTree = "<group>"; };
+		52EE5C23281320880019A5A0 /* Clients+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Clients+Injection.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				52EE5C0C2813133C0019A5A0 /* Network */,
+				52EE5C23281320880019A5A0 /* Clients+Injection.swift */,
+				52EE5C21281320400019A5A0 /* NetworkLayer+Injection.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -123,6 +137,8 @@
 		52EE5C04281310B70019A5A0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				52EE5C1C28131D9D0019A5A0 /* Character */,
+				52EE5C1728131C1B0019A5A0 /* House */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -151,8 +167,9 @@
 		52EE5C08281310D40019A5A0 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				52EE5BF128130F730019A5A0 /* GoTHousesApp.swift */,
+				52EE5C1F28131E620019A5A0 /* App+Injection.swift */,
 				52EE5C0F281314460019A5A0 /* Constants.swift */,
+				52EE5BF128130F730019A5A0 /* GoTHousesApp.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -161,9 +178,26 @@
 			isa = PBXGroup;
 			children = (
 				52EE5C132813175B0019A5A0 /* APIClient.swift */,
+				52EE5C1A28131CEC0019A5A0 /* APIService.swift */,
 				52EE5C0D281313510019A5A0 /* NetworkLayer.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		52EE5C1728131C1B0019A5A0 /* House */ = {
+			isa = PBXGroup;
+			children = (
+				52EE5C1828131C2B0019A5A0 /* APIHouseModel.swift */,
+			);
+			path = House;
+			sourceTree = "<group>";
+		};
+		52EE5C1C28131D9D0019A5A0 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				52EE5C1D28131DAE0019A5A0 /* APICharacterModel.swift */,
+			);
+			path = Character;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +277,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				52EE5C0E281313510019A5A0 /* NetworkLayer.swift in Sources */,
+				52EE5C24281320880019A5A0 /* Clients+Injection.swift in Sources */,
+				52EE5C2028131E620019A5A0 /* App+Injection.swift in Sources */,
+				52EE5C1B28131CEC0019A5A0 /* APIService.swift in Sources */,
+				52EE5C1E28131DAE0019A5A0 /* APICharacterModel.swift in Sources */,
+				52EE5C1928131C2B0019A5A0 /* APIHouseModel.swift in Sources */,
 				52EE5BF428130F730019A5A0 /* ContentView.swift in Sources */,
 				52EE5BF228130F730019A5A0 /* GoTHousesApp.swift in Sources */,
 				52EE5C10281314460019A5A0 /* Constants.swift in Sources */,
+				52EE5C22281320400019A5A0 /* NetworkLayer+Injection.swift in Sources */,
 				52EE5C142813175B0019A5A0 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
