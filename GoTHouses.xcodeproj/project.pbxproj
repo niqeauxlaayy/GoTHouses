@@ -51,9 +51,16 @@
 		52EE5BF028130F730019A5A0 /* GoTHouses */ = {
 			isa = PBXGroup;
 			children = (
-				52EE5BF128130F730019A5A0 /* GoTHousesApp.swift */,
-				52EE5BF328130F730019A5A0 /* ContentView.swift */,
-				52EE5BF528130F760019A5A0 /* Assets.xcassets */,
+				52EE5C08281310D40019A5A0 /* App */,
+				52EE5C07281310CC0019A5A0 /* Extensions */,
+				52EE5C06281310C50019A5A0 /* Helper */,
+				52EE5C05281310BF0019A5A0 /* Manager */,
+				52EE5C04281310B70019A5A0 /* Models */,
+				52EE5C03281310B00019A5A0 /* Resources */,
+				52EE5C02281310A70019A5A0 /* Services */,
+				52EE5C012813109E0019A5A0 /* Types */,
+				52EE5C00281310970019A5A0 /* ViewModels */,
+				52EE5BFF281310910019A5A0 /* Views */,
 				52EE5BF728130F760019A5A0 /* Preview Content */,
 			);
 			path = GoTHouses;
@@ -65,6 +72,79 @@
 				52EE5BF828130F760019A5A0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		52EE5BFF281310910019A5A0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52EE5BF328130F730019A5A0 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52EE5C00281310970019A5A0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		52EE5C012813109E0019A5A0 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		52EE5C02281310A70019A5A0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		52EE5C03281310B00019A5A0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				52EE5BF528130F760019A5A0 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		52EE5C04281310B70019A5A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52EE5C05281310BF0019A5A0 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		52EE5C06281310C50019A5A0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		52EE5C07281310CC0019A5A0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		52EE5C08281310D40019A5A0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				52EE5BF128130F730019A5A0 /* GoTHousesApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
