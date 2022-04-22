@@ -11,6 +11,7 @@
 		52EE5BF428130F730019A5A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5BF328130F730019A5A0 /* ContentView.swift */; };
 		52EE5BF628130F760019A5A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EE5BF528130F760019A5A0 /* Assets.xcassets */; };
 		52EE5BF928130F760019A5A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EE5BF828130F760019A5A0 /* Preview Assets.xcassets */; };
+		52EE5C0B281312540019A5A0 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 52EE5C0A281312540019A5A0 /* Resolver */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52EE5C0B281312540019A5A0 /* Resolver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +165,9 @@
 			dependencies = (
 			);
 			name = GoTHouses;
+			packageProductDependencies = (
+				52EE5C0A281312540019A5A0 /* Resolver */,
+			);
 			productName = GoTHouses;
 			productReference = 52EE5BEE28130F730019A5A0 /* GoTHouses.app */;
 			productType = "com.apple.product-type.application";
@@ -191,6 +196,9 @@
 				Base,
 			);
 			mainGroup = 52EE5BE528130F730019A5A0;
+			packageReferences = (
+				52EE5C09281312540019A5A0 /* XCRemoteSwiftPackageReference "Resolver" */,
+			);
 			productRefGroup = 52EE5BEF28130F730019A5A0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -419,6 +427,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		52EE5C09281312540019A5A0 /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		52EE5C0A281312540019A5A0 /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52EE5C09281312540019A5A0 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 52EE5BE628130F730019A5A0 /* Project object */;
 }
