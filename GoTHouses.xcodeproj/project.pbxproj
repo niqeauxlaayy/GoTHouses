@@ -21,6 +21,7 @@
 		52EE5C2028131E620019A5A0 /* App+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C1F28131E620019A5A0 /* App+Injection.swift */; };
 		52EE5C22281320400019A5A0 /* NetworkLayer+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C21281320400019A5A0 /* NetworkLayer+Injection.swift */; };
 		52EE5C24281320880019A5A0 /* Clients+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C23281320880019A5A0 /* Clients+Injection.swift */; };
+		52EE5C262813214D0019A5A0 /* Services+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE5C252813214D0019A5A0 /* Services+Injection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		52EE5C1F28131E620019A5A0 /* App+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+Injection.swift"; sourceTree = "<group>"; };
 		52EE5C21281320400019A5A0 /* NetworkLayer+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkLayer+Injection.swift"; sourceTree = "<group>"; };
 		52EE5C23281320880019A5A0 /* Clients+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Clients+Injection.swift"; sourceTree = "<group>"; };
+		52EE5C252813214D0019A5A0 /* Services+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services+Injection.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				52EE5C0C2813133C0019A5A0 /* Network */,
 				52EE5C23281320880019A5A0 /* Clients+Injection.swift */,
 				52EE5C21281320400019A5A0 /* NetworkLayer+Injection.swift */,
+				52EE5C252813214D0019A5A0 /* Services+Injection.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52EE5C0E281313510019A5A0 /* NetworkLayer.swift in Sources */,
+				52EE5C262813214D0019A5A0 /* Services+Injection.swift in Sources */,
 				52EE5C24281320880019A5A0 /* Clients+Injection.swift in Sources */,
 				52EE5C2028131E620019A5A0 /* App+Injection.swift in Sources */,
 				52EE5C1B28131CEC0019A5A0 /* APIService.swift in Sources */,

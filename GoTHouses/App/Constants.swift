@@ -17,6 +17,7 @@ enum Constants {
     
     enum API {
         static let host = "anapioficeandfire.com"
+        static let pageSize = "50"
         static let scheme = "https"
         
         enum Path {
