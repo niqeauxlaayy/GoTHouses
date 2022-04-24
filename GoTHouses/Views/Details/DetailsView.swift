@@ -34,7 +34,7 @@ private extension DetailsView {
     var content: some View {
         
         ContentStateView(source: self.viewModel) {
-            "No details found"
+            Constants.EmptyText.details
         } content: {
             
             ScrollView {
@@ -47,9 +47,8 @@ private extension DetailsView {
                             
                             ForEach(HouseDetailType.allCases, id: \.self) { type in
                                 
-                                if let houseDetail = houseDetails.ofType(type),
-                                   !houseDetail.value.isEmpty {
-                                    HouseDetailView(detail: houseDetail)
+                                if !houseDetails.ofType(type).value.isEmpty {
+                                    HouseDetailView(detail: houseDetails.ofType(type))
                                 }
                             }
                         }

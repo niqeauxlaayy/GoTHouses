@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 
 //MARK: - Constants
@@ -24,6 +25,20 @@ enum Constants {
             case characters(Int?)
             case houses(Int?)
         }
+    }
+    
+    //MARK: - EmptyText
+    
+    enum EmptyText {
+        static let content = "No houses found"
+        static let details = "No details found"
+    }
+    
+    
+    //MARK: - UI
+    
+    enum UI {
+        static let spacing: CGFloat = 4
     }
 }
 

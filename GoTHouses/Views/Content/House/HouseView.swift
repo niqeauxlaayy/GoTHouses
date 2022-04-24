@@ -35,7 +35,7 @@ private extension HouseView {
         
         HStack {
             
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: Constants.UI.spacing) {
                 
                 Text(self.name)
                     .bold()

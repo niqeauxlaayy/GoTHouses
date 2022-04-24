@@ -34,7 +34,7 @@ private extension ContentView {
     var content: some View {
         
         ContentStateView(source: self.viewModel) {
-            "No houses found"
+            Constants.EmptyText.content
         } content: {
             
             List {

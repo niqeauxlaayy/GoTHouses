@@ -34,7 +34,7 @@ private extension HouseDetailView {
         
         HStack {
             
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: Constants.UI.spacing) {
                 
                 Text(self.detail.type.name)
                     .bold()
@@ -55,6 +55,6 @@ private extension HouseDetailView {
 struct HouseDetailView_Previews: PreviewProvider {
     
     static var previews: some View {
-        HouseDetailView(detail: HouseDetailModel(value: "Name", type: .name))
+        HouseDetailView(detail: HouseDetailModel(value: HouseDetailType.name.name, type: .name))
     }
 }
