@@ -22,7 +22,7 @@ struct HouseModel: Identifiable, Equatable {
     let heirID: Int
     let overlordID: Int
     let founded: String
-    let founder: String
+    let founderID: Int
     let diedOut: String
     let ancestralWeapons: [String]
     let cadetBrancheIDs: [Int]

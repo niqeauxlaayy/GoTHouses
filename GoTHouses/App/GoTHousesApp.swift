@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct GoTHousesApp: App {
+    
     var body: some Scene {
+        
         WindowGroup {
-            ContentView()
+            
+            NavigationView {
+                ContentView(viewModel: ViewModelFactory.makeContentViewModel())
+                    .navigationBarTitleDisplayMode(.inline)
+            }
+            .navigationViewStyle(.stack)
         }
     }
 }

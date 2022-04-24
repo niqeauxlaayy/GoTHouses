@@ -27,21 +27,66 @@ extension HouseDetailsModelMapper: HouseDetailsModelMapperRepresentable {
     func map(_ house: HouseModel, characters: [CharacterModel], cadetBranches: [HouseModel]) -> HouseDetailsModel {
         HouseDetailsModel(
             id: house.id,
-            name: house.name,
-            region: house.region,
-            coatOfArms: house.coatOfArms,
-            words: house.words,
-            titles: house.titles,
-            seats: house.seats,
-            currentLord: characters.first { $0.type == .currentLord }.map { $0.name }.orEmpty,
-            heir: characters.first { $0.type == .heir }.map { $0.name }.orEmpty,
-            overlord: characters.first { $0.type == .overlord }.map { $0.name }.orEmpty,
-            founded: house.founded,
-            founder: house.founder,
-            diedOut: house.diedOut,
-            ancestralWeapons: house.ancestralWeapons,
-            cadetBranches: cadetBranches.map { $0.name },
-            swornMembers: characters.filter { $0.type == .swornMember }.map { $0.name }
+            name: HouseDetailModel(
+                value: house.name,
+                type: .name
+            ),
+            region: HouseDetailModel(
+                value: house.region,
+                type: .region
+            ),
+            coatOfArms: HouseDetailModel(
+                value: house.coatOfArms,
+                type: .coatOfArms
+            ),
+            words: HouseDetailModel(
+                value: house.words,
+                type: .words
+            ),
+            titles: HouseDetailModel(
+                value: house.titles.joined(separator: ", "),
+                type: .titles
+            ),
+            seats: HouseDetailModel(
+                value: house.seats.joined(separator: ", "),
+                type: .seats
+            ),
+            currentLord: HouseDetailModel(
+                value: characters.first { $0.type == .currentLord }.map { $0.name }.orEmpty,
+                type: .currentLord
+            ),
+            heir: HouseDetailModel(
+                value: characters.first { $0.type == .heir }.map { $0.name }.orEmpty,
+                type: .heir
+            ),
+            overlord: HouseDetailModel(
+                value: characters.first { $0.type == .overlord }.map { $0.name }.orEmpty,
+                type: .overlord
+            ),
+            founded: HouseDetailModel(
+                value: house.founded,
+                type: .founded
+            ),
+            founder: HouseDetailModel(
+                value: characters.first { $0.type == .founder}.map { $0.name }.orEmpty,
+                type: .founder
+            ),
+            diedOut: HouseDetailModel(
+                value: house.diedOut,
+                type: .diedOut
+            ),
+            ancestralWeapons: HouseDetailModel(
+                value: house.ancestralWeapons.joined(separator: ", "),
+                type: .ancestralWeapons
+            ),
+            cadetBranches: HouseDetailModel(
+                value: cadetBranches.map { $0.name }.joined(separator: ", "),
+                type: .cadetBranches
+            ),
+            swornMembers: HouseDetailModel(
+                value: characters.filter { $0.type == .swornMember }.map { $0.name }.joined(separator: ", "),
+                type: .swornMembers
+            )
         )
     }
 }

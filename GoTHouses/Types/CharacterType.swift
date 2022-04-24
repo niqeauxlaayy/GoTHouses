@@ -14,5 +14,6 @@ enum CharacterType {
     case currentLord
     case heir
     case overlord
+    case founder
     case swornMember
 }

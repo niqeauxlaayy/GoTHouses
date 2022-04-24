@@ -37,7 +37,7 @@ extension HouseModelMapper: HouseModelMapperRepresentable {
             heirID: self.getID(from: apiHouse.heir.orEmpty),
             overlordID: self.getID(from: apiHouse.overlord.orEmpty),
             founded: apiHouse.founded.orEmpty,
-            founder: apiHouse.founder.orEmpty,
+            founderID: self.getID(from: apiHouse.founder.orEmpty),
             diedOut: apiHouse.diedOut.orEmpty,
             ancestralWeapons: apiHouse.ancestralWeapons.orEmpty,
             cadetBrancheIDs: apiHouse.cadetBranches.orEmpty.map { self.getID(from: $0) },

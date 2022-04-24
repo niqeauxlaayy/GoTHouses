@@ -40,23 +40,20 @@ extension Manager: ManagerRepresentable {
         
         let publisher = PassthroughSubject<HouseDetailsModel, Error>()
         
-        let publishers = [
-            self.fetchCharacter(with: house.currentLordID, type: .currentLord),
-            self.fetchCharacter(with: house.heirID, type: .heir),
-            self.fetchCharacter(with: house.overlordID, type: .overlord)
-        ] +
-        house.cadetBrancheIDs.map { self.fetchHouse(with: $0) } +
-        house.swornMemberIDs.map { self.fetchCharacter(with: $0, type: .swornMember) }
-        
-        publishers.publisher.collect().sink { values in
-            
-            publisher.send(self.houseDetailsModelMapper.map(
-                house,
-                characters: values.compactMap { $0 as? CharacterModel },
-                cadetBranches: values.compactMap { $0 as? HouseModel }
-            ))
-        }
-        .store(in: &self.cancellables)
+        self.buildAdditionalHouseDetailsPublishers(for: house)
+            .sink { completion in
+                publisher.send(completion: completion)
+            } receiveValue: { characters, houses in
+                
+                publisher.send(
+                    self.houseDetailsModelMapper.map(
+                        house,
+                        characters: characters,
+                        cadetBranches: houses
+                    )
+                )
+            }
+            .store(in: &self.cancellables)
         
         return publisher.eraseToAnyPublisher()
     }
@@ -73,6 +70,47 @@ extension Manager: ManagerRepresentable {
 //MARK: - Helper
 
 private extension Manager {
+    
+    typealias AdditionalHouseDetailsPublishers = Publishers.CombineLatest<CharacterPublishers, HousePublishers>
+    typealias CharacterPublishers = Publishers.Collect<Publishers.MergeMany<AnyPublisher<CharacterModel, Error>>>
+    typealias HousePublishers = Publishers.Collect<Publishers.MergeMany<AnyPublisher<HouseModel, Error>>>
+    
+    func buildAdditionalHouseDetailsPublishers(for house: HouseModel) -> AdditionalHouseDetailsPublishers {
+        Publishers.CombineLatest(self.buildCharacterPublishers(for: house), self.buildHousePublishers(for: house))
+    }
+    
+    func buildCharacterPublishers(for house: HouseModel) -> CharacterPublishers {
+        
+        var publishers = [AnyPublisher<CharacterModel, Error>]()
+        
+        if self.isValid(house.currentLordID) {
+            publishers.append(self.fetchCharacter(with: house.currentLordID, type: .currentLord))
+        }
+        
+        if self.isValid(house.heirID) {
+            publishers.append(self.fetchCharacter(with: house.heirID, type: .heir))
+        }
+        
+        if self.isValid(house.overlordID) {
+            publishers.append(self.fetchCharacter(with: house.overlordID, type: .overlord))
+        }
+        
+        if self.isValid(house.founderID) {
+            publishers.append(self.fetchCharacter(with: house.founderID, type: .founder))
+        }
+        
+        publishers.append(contentsOf: house.swornMemberIDs.filter { self.isValid($0) }.map { self.fetchCharacter(with: $0, type: .swornMember) })
+        
+        return Publishers.MergeMany(publishers).collect()
+    }
+    
+    func buildHousePublishers(for house: HouseModel) -> HousePublishers {
+        Publishers.MergeMany(house.cadetBrancheIDs.filter { self.isValid($0) }.map { self.fetchHouse(with: $0) }).collect()
+    }
+    
+    func isValid(_ id: Int) -> Bool {
+        id > 0
+    }
     
     func fetchCharacter(with id: Int, type: CharacterType) -> AnyPublisher<CharacterModel, Error> {
         self.apiService
