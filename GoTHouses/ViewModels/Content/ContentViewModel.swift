@@ -64,10 +64,6 @@ private extension ContentViewModel {
     
     func loadHouses() {
         
-        guard self.state != .loading else {
-            return
-        }
-        
         self.state = .loading
         self.manager.fetchHouses(page: self.pageToLoad)
             .receive(on: DispatchQueue.main)
@@ -76,7 +72,7 @@ private extension ContentViewModel {
                 switch completion {
                     
                 case let .failure(error):
-                    self?.state = .failed(error)
+                    self?.state = self?.pageToLoad == 1 ? .failed(error) : .success
                     
                 case .finished:
                     break
@@ -93,8 +89,12 @@ private extension ContentViewModel {
     
     func handleResponse(houses: [HouseModel]) {
         
-        self.houses.append(contentsOf: houses)
-        self.state = houses.isEmpty ? self.pageToLoad == 1 ? .empty : .success : .success
-        self.pageToLoad += 1
+        if houses.isEmpty {
+            self.state = self.pageToLoad == 1 ? .empty : .success
+        } else {
+            self.houses.append(contentsOf: houses)
+            self.state = .success
+            self.pageToLoad += 1
+        }
     }
 }
